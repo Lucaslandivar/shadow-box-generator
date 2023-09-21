@@ -9,23 +9,33 @@ class BoxShadowGenerator {
         blurRef, 
         spread, 
         spreadRef,
+        color,
+        colorRef,
+        opacity,
+        opacityRef,
+        inset,
         previewBox,
         rule,
         webkitRule,
         mozRule
     ) {
-        this.horizontal = horizontal
-        this.horizontalRef = horizontalRef 
-        this.vertical = vertical 
-        this.verticalRef = verticalRef 
-        this.blur = blur 
-        this.blurRef = blurRef 
-        this.spread = spread 
-        this.spreadRef = spreadRef
-        this.previewBox = previewBox
-        this.rule = rule
-        this.webkitRule = webkitRule
-        this.mozRule = mozRule
+        this.horizontal = horizontal;
+        this.horizontalRef = horizontalRef; 
+        this.vertical = vertical; 
+        this.verticalRef = verticalRef; 
+        this.blur = blur; 
+        this.blurRef = blurRef; 
+        this.spread = spread; 
+        this.spreadRef = spreadRef;
+        this.color = color;
+        this.colorRef = colorRef;
+        this.opacity = opacity;
+        this.opacityRef = opacityRef;
+        this.inset = inset;
+        this.previewBox = previewBox;
+        this.rule = rule;
+        this.webkitRule = webkitRule;
+        this.mozRule = mozRule;
     }
 
     initialize() {
@@ -72,17 +82,25 @@ class BoxShadowGenerator {
 
 // ?Seleção de elementos
 // *Controles
-const horizontal = document.getElementById("horizontal");
-const horizontalRef = document.getElementById("horizontal-value");
-const vertical = document.getElementById("vertical");
-const verticalRef = document.getElementById("vertical-value");
-const blur = document.getElementById("blur");
-const blurRef = document.getElementById("blur-value");
-const spread = document.getElementById("spread");
-const spreadRef = document.getElementById("spread-value");
+const horizontal = document.querySelector("horizontal");
+const horizontalRef = document.querySelector("horizontal-value");
+const vertical = document.querySelector("vertical");
+const verticalRef = document.querySelector("vertical-value");
+const blur = document.querySelector("blur");
+const blurRef = document.querySelector("blur-value");
+const spread = document.querySelector("spread");
+const spreadRef = document.querySelector("spread-value");
+
+const color = document.querySelector("#color");
+const colorRef = document.querySelector("#color-value");
+
+const opacity = document.querySelector("#opacity");
+const opacityRef = document.querySelector("#opacity-value");
+
+const inset = document.querySelector("#inset");
 
 // *Preview
-const previewBox = document.getElementById("box");
+const previewBox = document.querySelector("box");
 
 // *Regras geradas
 const rule = document.querySelector("#rule span");
@@ -99,6 +117,11 @@ const boxShadow = new BoxShadowGenerator(
     blurRef, 
     spread, 
     spreadRef,
+    color,
+    colorRef,
+    opacity,
+    opacityRef,
+    inset,
     previewBox,
     rule,
     webkitRule,
