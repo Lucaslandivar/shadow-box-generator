@@ -11,7 +11,7 @@
 <p>I make this project so i can have a propper shadow desing in my future projects.</p>
 
 <h2>How does this project work?</h2>
-<P>The project have a few inputs, in wich the user will ajust them to make the shadow he wants. There are inputs for every style a shadow can have in CSS.</p>
+<P>The project have a few inputs, in wich the user will ajust them to make the shadow he wants. There are inputs for every style a shadow can have in CSS. Once finished, the user can just copy the entire CSS code for the shadow that he generated.</p>
 
 <h2>Tecnologies</h2>
 <p>HTML</p>
